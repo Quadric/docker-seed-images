@@ -2,6 +2,7 @@
 
 set -eo pipefail
 
+(cd alpine && sh build.sh) &
 (cd conn && sh build.sh) &
 (cd meteor && sh build.sh) &
 (cd mongo && sh build.sh) &
