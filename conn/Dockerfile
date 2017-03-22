@@ -3,15 +3,14 @@ FROM python:3.4
 LABEL maintainer="Ahmed Magdy <ahmed.magdy@quadric.net>"
 
 # TODO use mongo-connector/requirements file to install dependencies !
-RUN (apt-get update && \
+RUN apt-get update && \
     apt-get install -y curl && \
     curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
     apt-get install -y nodejs --no-install-recommends && \
-    rm -rf /var/lib/apt/lists/*) & \
-    (pip install elastic2-doc-manager[elastic2]==0.3.0 elasticsearch==2.4.0 mongo-connector==2.5) & wait
+    rm -rf /var/lib/apt/lists/*
 
-# elastic2-doc-manager==0.1.0
-# elasticsearch==2.4.0
+COPY ./requirements.txt /tmp/requirements.txt
 
-# elastic2-doc-manager[elastic2]==0.3.0
-# mongo-connector==2.5
+RUN pip install -r /tmp/requirements.txt
+
+# RUN pip install elastic2-doc-manager[elastic2]==0.3.0 elasticsearch==2.4.0 mongo-connector==2.5
