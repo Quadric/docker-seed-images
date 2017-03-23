@@ -1,5 +1,0 @@
-elastic2-doc-manager[elastic2]==0.3.0
-# elastic2-doc-manager==0.1.0
-elasticsearch==2.4.0
-mongo-connector==2.5
-# mongo-connector==2.3
