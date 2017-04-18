@@ -1,7 +1,7 @@
 FROM node:5.12.0
 # FROM meteorhacks/meteord:devbuild
 
-LABEL maintainer="Ahmed Magdy <ahmed.magdy@quadric.net>"
+LABEL net.quadric.vendor="Quadric ApS" maintainer="Ahmed Magdy <ahmed.magdy@quadric.net>"
 
 # ENV DEBIAN_FRONTEND noninteractive
 

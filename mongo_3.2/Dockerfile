@@ -1,6 +1,6 @@
 FROM mongo:3.2
 
-LABEL maintainer="Ahmed Magdy <ahmed.magdy@quadric.net>"
+LABEL net.quadric.vendor="Quadric ApS" maintainer="Ahmed Magdy <ahmed.magdy@quadric.net>"
 
 RUN apt-get update && \
     apt-get -y install curl && \

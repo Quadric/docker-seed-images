@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-LABEL maintainer="Ahmed Magdy <ahmed.magdy@quadric.net>"
+LABEL net.quadric.vendor="Quadric ApS" maintainer="Ahmed Magdy <ahmed.magdy@quadric.net>"
 
 RUN apk update && \
     apk add ca-certificates && \

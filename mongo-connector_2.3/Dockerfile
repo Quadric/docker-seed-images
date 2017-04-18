@@ -1,6 +1,6 @@
 FROM python:3.4
 
-LABEL maintainer="Ahmed Magdy <ahmed.magdy@quadric.net>"
+LABEL net.quadric.vendor="Quadric ApS" maintainer="Ahmed Magdy <ahmed.magdy@quadric.net>"
 
 COPY ./requirements.txt /tmp/requirements.txt
 
