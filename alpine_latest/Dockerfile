@@ -9,4 +9,4 @@ RUN apk update && \
     apk add --update --no-cache curl && \
     rm -rf /var/cache/apk/*
 
-ENTRYPOINT ["/usr/bin/curl"]
+# ENTRYPOINT ["/usr/bin/curl"]
