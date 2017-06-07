@@ -7,6 +7,7 @@ This repo contains few custom docker seed images.
 | Name | Description |
 |------|-------------|
 | alpine:latest | Fix wget in alpine:latest |
+| jq:latest | [jq](https://stedolan.github.io/jq/) on alpine |
 | meteor:1.4.2.7 | Custom meteor 1.4.2.7 on node 5.12 |
 | mongo:3.2 | Install curl on mongo:3.2 |
 | mongo-connector:2.3 | Install mongo-connector 2.3 and correspondant depedencies on python 3.4 |
