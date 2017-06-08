@@ -16,7 +16,7 @@ if [ ! -f "$MONGO_CONNECTOR_CONFIG_FILE_PATH" ] ; then
     exit 1;
   fi
 
-  echo "$MONGO_CONNECTOR_CONFIG" | python3 -m json.tool > "$MONGO_CONNECTOR_CONFIG_FILE_PATH"
+  echo "$MONGO_CONNECTOR_CONFIG" | sed -e 's/\\\\040/ /g' | python3 -m json.tool > "$MONGO_CONNECTOR_CONFIG_FILE_PATH"
 fi
 
 mongo-connector -c "$MONGO_CONNECTOR_CONFIG_FILE_PATH"
