@@ -8,6 +8,10 @@ RUN apt-get update && \
     apt-get install -y jq && \
     rm -rf /var/lib/apt/lists/*
 
+COPY run.sh /run.sh
+
 COPY ./requirements.txt /tmp/requirements.txt
 
 RUN pip install -r /tmp/requirements.txt
+
+ENTRYPOINT bash /run.sh
