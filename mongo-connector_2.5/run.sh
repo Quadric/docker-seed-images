@@ -21,13 +21,17 @@ if [ ! -f "$MONGO_CONNECTOR_CONFIG_FILE_PATH" ] ; then
   echo "$MONGO_CONNECTOR_CONFIG" | sed -e 's/\\\\040/ /g' | python3 -m json.tool > "$MONGO_CONNECTOR_CONFIG_FILE_PATH"
 fi
 
-if [ ! -f "$MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH" ] ; then
-  echo "Creating Symlink file: $MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH";
-  # Read oplogFile property from config file and create a symlink to /symlink-oplog.timestamp
-  ln -s "$(jq --raw-output .oplogFile "$MONGO_CONNECTOR_CONFIG_FILE_PATH")" "$MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH"
-else
-  echo "Symlink file: $MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH already exists!";
+if [ -f "$MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH" ] ; then
+  echo "Symlink file: $MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH already exists! .. removing it!";
+  rm "$MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH";
 fi
 
-echo "Start the app";
+MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH="$(jq --raw-output .oplogFile "$MONGO_CONNECTOR_CONFIG_FILE_PATH")"
+
+echo "Creating Symlink file: $MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH to Oplog file: $MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH";
+# Read oplogFile property from config file and create a symlink to /symlink-oplog.timestamp
+ln -s "$MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH" "$MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH"
+
+echo "Running mongo-connector..";
+
 mongo-connector -c "$MONGO_CONNECTOR_CONFIG_FILE_PATH"
