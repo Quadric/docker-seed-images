@@ -26,7 +26,7 @@ if [ -f "$MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH" ] ; then
   rm "$MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH";
 fi
 
-MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH="$(jq --raw-output .oplogFile "$MONGO_CONNECTOR_CONFIG_FILE_PATH")"
+MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH=${MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH:-"$(jq --raw-output .oplogFile "$MONGO_CONNECTOR_CONFIG_FILE_PATH")"}
 
 echo "Creating Symlink file: $MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH to Oplog file: $MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH";
 # Read oplogFile property from config file and create a symlink to /symlink-oplog.timestamp
