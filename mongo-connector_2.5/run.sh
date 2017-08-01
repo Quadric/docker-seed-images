@@ -33,6 +33,8 @@ fi
 if [ -f "$MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH" ] ; then
   echo "Symlink file: $MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH already exists! .. removing it!";
   rm "$MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH";
+else
+  echo "Symlink file: $MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH doesn't exist!";
 fi
 
 # Get the oplog file path from the config after being sure that the file is in place now
