@@ -29,6 +29,15 @@ if [ ! -f "$MONGO_CONNECTOR_CONFIG_FILE_PATH" ] ; then
   echo "$MONGO_CONNECTOR_CONFIG" | sed -e 's/\\\\040/ /g' | python3 -m json.tool > "$MONGO_CONNECTOR_CONFIG_FILE_PATH"
 fi
 
+# Get the oplog file path from the config after being sure that the file is in place now
+MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH=${MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH:-"$(jq --raw-output .oplogFile "$MONGO_CONNECTOR_CONFIG_FILE_PATH")"}
+
+# Check that the oplog.timestamp file (from config -not the symlink one-) exists
+if [ ! -f "$MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH" ] ; then
+  echo "Oplog file: ($MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH) defined in config doesn't exist .. creating an empty one!";
+  touch "$MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH"
+fi
+
 # If the symlink file exists, then remove it!
 if [ -f "$MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH" ] ; then
   echo "Symlink file: $MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH already exists! .. removing it!";
@@ -37,8 +46,6 @@ else
   echo "Symlink file: $MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH doesn't exist!";
 fi
 
-# Get the oplog file path from the config after being sure that the file is in place now
-MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH=${MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH:-"$(jq --raw-output .oplogFile "$MONGO_CONNECTOR_CONFIG_FILE_PATH")"}
 
 # Create a symlink to the target oplog file 
 echo "Creating Symlink file: $MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH to Oplog file: $MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH";
