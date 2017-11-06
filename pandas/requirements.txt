@@ -10,7 +10,7 @@ numpy==1.13.3
 pandas==0.21.0
 
 # scipy==0.18.1
-scipy==1.0.0
+# scipy==1.0.0
 
 # This is used only in the IDE (uncomment it if we managed to run python from this docker image in the future!)
 # matplotlib==2.1.0
