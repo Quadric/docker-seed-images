@@ -6,4 +6,5 @@ RUN apk update \
  && apk add jq \
  && rm -rf /var/cache/apk/*
 
+# CMD ["/usr/bin/jq"]
 ENTRYPOINT ["/usr/bin/jq"]
