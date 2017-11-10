@@ -1,4 +1,4 @@
-FROM abernix/meteord:node-8.9.0-base
+FROM abernix/meteord:node-8.9.1-base
 
 LABEL net.quadric.vendor="Quadric ApS" maintainer="Ahmed Magdy <ahmed.magdy@quadric.net>"
 
