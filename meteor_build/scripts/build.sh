@@ -16,11 +16,7 @@ CONTAINER_BUNDLE_DIR=${CONTAINER_BUNDLE_DIR:-/tmp/bundle-dir}
 
 echo "=> Executing Meteor Build..."
 # export
-meteor build \
-. \
---allow-superuser \
---directory $BUNDLE_DIR \
---architecture os.linux.x86_64
+meteor build --allow-superuser --architecture os.linux.x86_64 --directory $BUNDLE_DIR
 # --server=http://localhost:3000 # TODO send the server if we are building for mobile
 
 echo "=> Printing Meteor Node information..."
