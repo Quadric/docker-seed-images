@@ -10,6 +10,7 @@ This repo contains few custom docker seed images.
 | envsubst | [envsubst](https://linux.die.net/man/1/envsubst) on alpine |
 | hashicorp-packer-sh-entrypoint_1.1.2 | Update entrypoint of `hashicorp/packer:1.1.2` to sh |
 | jq:latest | [jq](https://stedolan.github.io/jq/) on alpine .. [alpine packages](https://pkgs.alpinelinux.org/packages?name=jq&branch=&repo=&arch=&maintainer=) |
+| lerna | [lerna](https://www.npmjs.com/package/lerna) on node:8.9.3 |
 | meteor_base | Custom meteor base image based on abernix:meteord |
 | mongo:3.2 | Install curl on mongo:3.2 |
 | mongo:3.4 | Install curl on mongo:3.4 |
