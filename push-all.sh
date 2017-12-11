@@ -14,9 +14,8 @@
 
 (cd alpine_latest && sh push.sh) &
 (cd jq_latest && sh push.sh) &
-(cd meteor_1.4.2.7 && sh push.sh) &
 (cd mongo_3.2 && sh push.sh) & 
 (cd mongo-connector_2.3 && sh push.sh) &
 (cd mongo-connector_2.5 && sh push.sh) &
-(cd serverless_latest && sh push.sh) &
+(cd serverless && sh push.sh) &
 wait

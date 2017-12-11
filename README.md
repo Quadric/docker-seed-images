@@ -7,13 +7,16 @@ This repo contains few custom docker seed images.
 | Name | Description |
 |------|-------------|
 | alpine:latest | Fix wget in alpine:latest |
+| envsubst | [envsubst](https://linux.die.net/man/1/envsubst) on alpine |
+| hashicorp-packer-sh-entrypoint_1.1.2 | Update entrypoint of `hashicorp/packer:1.1.2` to sh |
 | jq:latest | [jq](https://stedolan.github.io/jq/) on alpine .. [alpine packages](https://pkgs.alpinelinux.org/packages?name=jq&branch=&repo=&arch=&maintainer=) |
-| meteor:1.4.2.7 | Custom meteor 1.4.2.7 on node 5.12 |
+| meteor_base | Custom meteor base image based on abernix:meteord |
 | mongo:3.2 | Install curl on mongo:3.2 |
 | mongo:3.4 | Install curl on mongo:3.4 |
 | mongo-connector:2.3 | Install mongo-connector 2.3 and correspondant depedencies on python 3.4 |
 | mongo-connector:2.5 | Install mongo-connector 2.5 and correspondant depedencies on python 3.4 |
-| serverless:latest | Installs the latest serverless node module on node 6 |
+| pandas | 
+| serverless:node-8.9.3 | Installs serverless node module on node 8.9.3 |
 
 ## Commands
 
