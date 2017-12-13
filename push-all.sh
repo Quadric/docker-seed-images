@@ -13,7 +13,7 @@
 # done
 
 (cd alpine && sh push.sh) &
-(cd jq_latest && sh push.sh) &
+(cd jq && sh push.sh) &
 (cd mongo_3.2 && sh push.sh) & 
 (cd mongo-connector_2.3 && sh push.sh) &
 (cd mongo-connector_2.5 && sh push.sh) &
