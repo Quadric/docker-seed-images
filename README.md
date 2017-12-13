@@ -6,7 +6,7 @@ This repo contains few custom docker seed images.
 
 | Name | Description |
 |------|-------------|
-| alpine:latest | Fix wget in alpine:latest |
+| alpine:3.7 | Fix wget in alpine:3.7 |
 | envsubst | [envsubst](https://linux.die.net/man/1/envsubst) on alpine |
 | hashicorp-packer-sh-entrypoint_1.1.2 | Update entrypoint of `hashicorp/packer:1.1.2` to sh |
 | jq:latest | [jq](https://stedolan.github.io/jq/) on alpine .. [alpine packages](https://pkgs.alpinelinux.org/packages?name=jq&branch=&repo=&arch=&maintainer=) |

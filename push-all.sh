@@ -12,7 +12,7 @@
 #     fi
 # done
 
-(cd alpine_latest && sh push.sh) &
+(cd alpine && sh push.sh) &
 (cd jq_latest && sh push.sh) &
 (cd mongo_3.2 && sh push.sh) & 
 (cd mongo-connector_2.3 && sh push.sh) &
