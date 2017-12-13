@@ -17,7 +17,8 @@ This repo contains few custom docker seed images.
 | mongo-connector:2.3 | Install mongo-connector 2.3 and correspondant depedencies on python 3.4 |
 | mongo-connector:2.5 | Install mongo-connector 2.5 and correspondant depedencies on python 3.4 |
 | pandas | Install python dependencies on top of python:3.6.3 to run tests in quadric network | 
-| serverless:node-8.9.3 | Installs serverless node module on node 8.9.3 |
+| serverless:node-8.9.3 | Installs `serverless` node module globally on node:8.9.3 |
+| nsp:node-8.9.3 | Installs `nsp` node module globally on node:8.9.3 |
 
 ## Commands
 
