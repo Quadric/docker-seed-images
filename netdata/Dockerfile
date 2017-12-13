@@ -1,7 +1,7 @@
 FROM firehol/netdata
 
-# FROM alpine:latest
-# FROM quadric/alpine:latest
+# FROM alpine:3.7
+# FROM quadric/alpine:3.7
 
 LABEL net.quadric.vendor="Quadric ApS" maintainer="Ahmed Magdy <ahmed.magdy@quadric.net>"
 
