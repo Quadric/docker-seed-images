@@ -16,6 +16,8 @@ elastic2-doc-manager[elastic2]==0.3.0
 neo4j-doc-manager==0.1.2
 ```
 
+Follow latest releases using `pip/pip3 search <_keyword_>` or through the [pip package index](https://pypi.python.org/pypi/pip)
+
 ## Environment variables
 
 | Env | Required | Default | Description |
