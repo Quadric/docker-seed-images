@@ -11,7 +11,7 @@ For now they are:
 
 ```bash
 mongo-connector==2.5
-elasticsearch==2.4.0
+elasticsearch==2.4.1
 elastic2-doc-manager[elastic2]==0.3.0
 ```
 
