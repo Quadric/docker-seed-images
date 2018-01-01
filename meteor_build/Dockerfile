@@ -1,4 +1,4 @@
-FROM abernix/meteord:node-8.9.1-base
+FROM abernix/meteord:node-8.9.3-base
 
 LABEL net.quadric.vendor="Quadric ApS" maintainer="Ahmed Magdy <ahmed.magdy@quadric.net>"
 
@@ -19,4 +19,4 @@ COPY ./scripts/build.sh /build.sh
 
 #RUN ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
-RUN curl -sL https://install.meteor.com?release=1.6 | sed s/--progress-bar/-sL/g | /bin/sh
+RUN curl -sL https://install.meteor.com | sed s/--progress-bar/-sL/g | /bin/sh
