@@ -1,6 +1,19 @@
 # Mongo Connector 2.5
 
-This document describes how to use mongo-connector:2.5 image
+This document describes how to use `mongo-connector:2.5` image
+
+## Other dependencies
+
+The requirements are saved in the `requirements.txt` next to the Dockerfile, and the dependencies are static for now
+Maybe in the future I'll move these installations to the Dockerfile, and make them configurable through build vars
+
+For now they are:
+
+```bash
+mongo-connector==2.5
+elasticsearch==2.4.0
+elastic2-doc-manager[elastic2]==0.3.0
+```
 
 ## Environment variables
 
@@ -60,16 +73,3 @@ This is done by trying to read the replica set name from the symlink file pointi
 It was done this way, as the oplog file path is dynamic, so I wrote the health check command pointing to a static symlink file, and I update the symlink in the startup to point to the oplog file path after I read it from the configuration.
 
 I could just check if it contains any text, but I preferred to be sure, and try to read the replica set name instead!
-
-## Pip requirements.txt
-
-The requirements are saved in the requirements.txt next to the Dockerfile, and the dependencies are static for now
-Maybe in the future I'll move these installations to the Dockerfile, and make them configurable through build vars
-
-For now they are:
-
-```bash
-elasticsearch==2.4.0
-elastic2-doc-manager[elastic2]==0.3.0
-mongo-connector==2.5
-```
