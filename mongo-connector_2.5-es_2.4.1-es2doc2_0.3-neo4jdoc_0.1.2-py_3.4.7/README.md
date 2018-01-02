@@ -76,3 +76,24 @@ This is done by trying to read the replica set name from the symlink file pointi
 It was done this way, as the oplog file path is dynamic, so I wrote the health check command pointing to a static symlink file, and I update the symlink in the startup to point to the oplog file path after I read it from the configuration.
 
 I could just check if it contains any text, but I preferred to be sure, and try to read the replica set name instead!
+
+## Pip list
+
+In the time of the creation of this image, `pip list` output [2 Jan 2018] is:
+
+```bash
+certifi (2017.11.5)
+chardet (3.0.4)
+elastic2-doc-manager (0.3.0)
+elasticsearch (2.4.1)
+idna (2.6)
+mongo-connector (2.5.0)
+neo4j-doc-manager (0.1.2)
+pip (9.0.1)
+py2neo (2.0.8)
+pymongo (3.6.0)
+requests (2.18.4)
+setuptools (38.2.4)
+urllib3 (1.22)
+wheel (0.30.0)
+```
