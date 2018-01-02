@@ -1,6 +1,6 @@
 # Mongo Connector 2.5
 
-This document describes how to use `quadric/mongoconnector_2.5-elasticsearch_2.4-elastic2docman2_0.3.0-neo4jdocman_0.1.2` image
+This document describes how to use `quadric/mongo-connector:2.5-es_2.4.1-es2doc2_0.3-neo4jdoc_0.1.2-py_3.4.7-1` image
 
 ## Other dependencies
 
