@@ -38,6 +38,8 @@ if [ ! -f "$MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH" ] ; then
   touch "$MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH"
 fi
 
+# TODO check that the value of MONGO_CONNECTOR_CONFIG_OPLOG_FILE_PATH, doens't equal MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH so it won't break when we try to create a symlink to it
+
 # If the symlink file exists, then remove it!
 if [ -f "$MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH" ] ; then
   echo "Symlink file: $MONGO_CONNECTOR_OPLOG_FILE_SYMLINK_PATH already exists! .. removing it!";
