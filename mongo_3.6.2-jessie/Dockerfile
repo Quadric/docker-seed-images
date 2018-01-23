@@ -1,4 +1,4 @@
-FROM mongo:3.6.1-jessie
+FROM mongo:3.6.2-jessie
 
 LABEL net.quadric.vendor="Quadric ApS" maintainer="Ahmed Magdy <ahmed.magdy@quadric.net>"
 
