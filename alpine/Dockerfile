@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.8
 
 LABEL net.quadric.vendor="Quadric ApS" maintainer="Ahmed Magdy <ahmed.magdy@quadric.net>"
 
