@@ -1,0 +1,10 @@
+language: generic
+services:
+  - docker
+
+install:
+  - ./build.sh
+
+script:
+  - ./test.sh
+
