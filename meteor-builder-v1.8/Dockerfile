@@ -1,4 +1,4 @@
-FROM node:8.12.0-jessie
+FROM node:8.14.0-jessie
 
 LABEL net.quadric.vendor="Quadric ApS" maintainer="Ahmed Magdy <ahmed.magdy@quadric.net>"
 
